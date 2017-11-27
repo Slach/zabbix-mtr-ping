@@ -12,6 +12,13 @@ Zabbix ping remote hosts over mtr
 
 ```
 
+# Tuning for /etc/zabbix/zabbix_agentd.conf
+Timeout=30
+ServerActive=<your_zabbix_server>
+
+# Tuning for /etc/zabbix/zabbix_server.conf
+Timeout=30
+
 ## Install Templates
 
 Open Zabbix Menu:
