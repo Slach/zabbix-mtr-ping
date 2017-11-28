@@ -3,6 +3,7 @@ Zabbix ping remote hosts over mtr
 
 # Install on host with installed zabbix-agent
 ```bash
+		apt-get install -y mtr
     cd /opt/
     git clone https://github.com/Slach/zabbix-mtr-ping.git
     cp -fv /opt/zabbix-mtr-ping/UserParams.conf /etc/zabbix/zabbix_agentd.conf.d/zabbix_mtr_ping.conf
@@ -13,11 +14,15 @@ Zabbix ping remote hosts over mtr
 ```
 
 # Tuning for /etc/zabbix/zabbix_agentd.conf
+```
 Timeout=30
 ServerActive=<your_zabbix_server>
-
+StartAgents=10
+```
 # Tuning for /etc/zabbix/zabbix_server.conf
+```
 Timeout=30
+```
 
 ## Install Templates
 
