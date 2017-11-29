@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-11-27T12:33:16Z</date>
+    <date>2017-11-28T05:18:48Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -34,9 +34,9 @@
                     <history>30</history>
                     <trends>90</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units>msec</units>
+                    <units>ms</units>
                     <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -77,9 +77,9 @@
                     <history>30</history>
                     <trends>90</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units>msec</units>
+                    <units>ms</units>
                     <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -135,10 +135,10 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Zabbix MTR Ping:zabbix_mtr[-n -c 3 --tcp --port 443,s3.eu-west-1.amazonaws.com].last()}&gt;100</expression>
+            <expression>{Template Zabbix MTR Ping:zabbix_mtr[-n -c 3 --tcp --port 443,s3.eu-west-1.amazonaws.com].last()}&gt;2000</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
-            <name>HTTPS TCP connected to AWS S3 eu-west-1 more than 100ms</name>
+            <name>HTTPS TCP connected to AWS S3 eu-west-1 more than 2000ms</name>
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
