@@ -6,10 +6,10 @@ Zabbix ping remote hosts over mtr
 		apt-get install -y mtr
     cd /opt/
     git clone https://github.com/Slach/zabbix-mtr-ping.git
-    cp -fv /opt/zabbix-mtr-ping/UserParams.conf /etc/zabbix/zabbix_agentd.conf.d/zabbix_mtr_ping.conf
+    cp -fv /opt/zabbix-mtr-ping/UserParams.conf /etc/zabbix/zabbix_agentd.d/zabbix_mtr_ping.conf
     chmod +x /opt/zabbix-mtr-ping/zabbix-mtr.sh
     # check ping working
-    sudo -H -u zabbix /opt/zabbix-mtr-ping/zabbix-mtr.sh -n -c 3 8.8.8.8
+    sudo -H -u zabbix /opt/zabbix-mtr-ping/zabbix_mtr.sh -n -c 3 8.8.8.8
 
 ```
 
